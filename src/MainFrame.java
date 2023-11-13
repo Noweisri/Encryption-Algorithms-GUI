@@ -123,6 +123,7 @@ public class MainFrame extends JFrame {
 				brief.setText((String) valueUnderneath);
 				MAX_KEY = (int) ArrayOfAlgorithms[3][columnIndex];
 				System.out.print(MAX_KEY);
+
 			}
 		});
 		ChooseAlgorithm.setBounds(39, 103, 512, 48);
@@ -172,7 +173,7 @@ public class MainFrame extends JFrame {
 				}
 			}
 		});
-		addkey.setBounds(426, 384, 95, 40);
+		addkey.setBounds(439, 363, 95, 40);
 		addkey.setFont(new Font("Trebuchet MS", Font.PLAIN, 14));
 		contentPane.add(addkey);
 
