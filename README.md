@@ -93,7 +93,7 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 5. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
 
-6. After you finsh of your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
+6. After you finish your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
 
 
 ## Tips for editing code:
@@ -112,9 +112,14 @@ getKeyValue() // Call this method, it will return an array of key values
 ```
 
 ### Displaying error
-try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
+Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
+IMPORTANT, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
 ```java
 Error("Add here the text of your error")
+```
+### Display results
+```Java
+results.SetText("Write here the results of your method")
 ```
 
 ### Link your algorithm to encrypt and decrypt buttons
