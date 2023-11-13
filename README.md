@@ -5,11 +5,11 @@
 - [Interface Overview](#Interface-OverView)
 - [Integration Guide](#Integration-Guide)
 - [Tips for Editing Code](#Tips-for-Editng-code)
- 	- [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
+	- [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
    	- [How to get key values](How-to-get-key-values)
   	- [Displaying error](Displaying-error)
   	- [Link your algorithm to encrypt and decrypt buttons](Link-your-algorithm-to-encrypt-and-decrypt-buttons)
-
+	-[HMAC Digital Signature Hash](HMAC-Digital-Signature-Hash)
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
 As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
@@ -148,7 +148,7 @@ EncBtn.addActionListener(new ActionListener() {
 });
 ```
 
-### HMAC - Digital Signature - Hash
+### HMAC Digital Signature Hash
 ```Java
 // HMAC Button
 JButton HmacBtn = new JButton("HMAC");
@@ -179,6 +179,9 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Pull request steps
+1. You Should to push your code on githup by git
+2. then make pull request to we get your code solution as the figure
+
 
 ## Group Members
 - Nawaf Al-Noweisri
