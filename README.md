@@ -89,10 +89,58 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 4. Now you have your Own Version Of the Code
 
-5. Add your Changes On the Code ( To Know How to Add your Algorithm Click [Here](#Add-Algorithm)
+5. Add your Changes On the Code ( To Know How to Add your Algorithm Click [Here](#Tips-for-editng-code)
 
-## Tips for Editng Code:
-1. 
+## Tips for editing code:
+
+###How to add your algorithm to drop-menu list 
+```Java
+Object[][] ArrayOfAlgorithms = {
+			{ "Example Algorithm", }, // Algorithm name, String
+			{ "Example Brief", }, // Algorithm brief (also write the required format of writing the keys), String
+			{ 1, } // Maximum number of keys of your algorithm, Integer
+	};
+```
+###How to get key values
+```Java
+getKeyValue() // Call this method, it will return an array of key values
+```
+
+###Displaying error
+try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
+```java
+Error("Add here the text of your error")
+```
+
+###How to link your algorithm to buttons
+After implementing your algorithm in a separate method, you must perform the next two steps
+
+```java
+// Decrypt button
+		JButton DecBtn = new JButton("Decrypt");
+		DecBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				switch (ChooseAlgorithm.getSelectedItem().toString()) {
+					case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
+						// Call here your algorithm function
+						break;
+				}
+			}
+		});
+```
+```java
+// Encrypt button
+		JButton EncBtn = new JButton("Encrypt");
+		EncBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				switch (ChooseAlgorithm.getSelectedItem().toString()) {
+					case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
+						// Call here your algorithm function
+						break;
+				}
+			}
+		});
+```
 
 ## Group Members
 - Nawaf Al-Noweisri
