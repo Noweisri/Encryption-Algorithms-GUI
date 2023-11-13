@@ -115,6 +115,7 @@ getKeyValue() // Call this method, it will return an array of key values
 ### Displaying error
 Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
 IMPORTANT, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
+
 ```java
 Error("Add here the text of your error")
 ```
@@ -153,7 +154,7 @@ EncBtn.addActionListener(new ActionListener() {
 });
 ```
 
-### HMAC Digital Signature Hash
+### HMAC - Digital Signature - Hash
 ```Java
 // HMAC Button
 JButton HmacBtn = new JButton("HMAC");
