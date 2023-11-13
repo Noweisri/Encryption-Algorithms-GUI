@@ -79,6 +79,7 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 ## Integration Guide:
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
+![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
 
 2. Go to the top right and Click Fork Button
 ![Screenshot 2023-11-13 215108](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/78968f87-2215-437d-9c4c-e498f51f1512)
@@ -190,8 +191,8 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Group Members
-- Nawaf Al-Noweisri
-- Abdullah Al-Saab
-- Abdullah Al-Fawaz
+- Nawaf Al-Noweisri 44
+- Abdullah Al-Saab 44
+- Abdullah Al-Fawaz 44
 
 
