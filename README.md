@@ -1,15 +1,16 @@
 # Encryption Algorithms GUI <sub>CSC429 - Computer Security Project</sub>
-## Table OF Contents
+## Table of contents
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-OverView)
 - [Integration Guide](#Integration-Guide)
-- [Tips for Editing Code](#Tips-for-Editng-code)
- 	- [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
-   	- [How to get key values](How-to-get-key-values)
-  	- [Displaying error](Displaying-error)
-  	- [Link your algorithm to encrypt and decrypt buttons](Link-your-algorithm-to-encrypt-and-decrypt-buttons)
 
+- [Tips for Editing Code](#Tips-for-Editng-code)
+  - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
+  - [How to get key values](#How-to-get-key-values)
+  - [Displaying error](#Displaying-error)
+  - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
+  - [HMAC Digital Signature Hash](#HMAC-Digital-Signature-Hash)
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
 As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
@@ -78,6 +79,7 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 ## Integration Guide:
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
+![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
 
 2. Go to the top right and Click Fork Button
 ![Screenshot 2023-11-13 215108](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/78968f87-2215-437d-9c4c-e498f51f1512)
@@ -93,7 +95,7 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 5. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
 
-6. After you finsh of your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
+6. After you finish your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
 
 
 ## Tips for editing code:
@@ -112,9 +114,15 @@ getKeyValue() // Call this method, it will return an array of key values
 ```
 
 ### Displaying error
-try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
+Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
+IMPORTANT, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
+
 ```java
 Error("Add here the text of your error")
+```
+### Display results
+```Java
+results.SetText("Write here the results of your method")
 ```
 
 ### Link your algorithm to encrypt and decrypt buttons
@@ -124,7 +132,7 @@ After implementing your algorithm in a separate method, you must perform the nex
 // Decrypt button
 JButton DecBtn = new JButton("Decrypt");
 DecBtn.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+   public void actionPerformed(ActionEvent e) {
 	switch (ChooseAlgorithm.getSelectedItem().toString()) {
 		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
 		// Call here your algorithm function
@@ -137,10 +145,10 @@ public void actionPerformed(ActionEvent e) {
 // Encrypt button
 JButton EncBtn = new JButton("Encrypt");
 EncBtn.addActionListener(new ActionListener() {
-	public void actionPerformed(ActionEvent e) {
-		switch (ChooseAlgorithm.getSelectedItem().toString()) {
-			case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
-			// Call here your algorithm function
+   public void actionPerformed(ActionEvent e) {
+	switch (ChooseAlgorithm.getSelectedItem().toString()) {
+		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
+		// Call here your algorithm function
 		break;
 		}
 	}
@@ -157,6 +165,24 @@ HmacBtn.addActionListener(new ActionListener() {
 	}
 });
 ```
+```Java
+// Digital Signiture Button
+JButton DSBtn = new JButton("Digital Signiture");
+DSBtn.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+	// Here implement Digital Signutre Algorithm
+	}
+});
+```
+```Java
+// Hash Button
+JButton HashBtn = new JButton("HASH");
+HashBtn.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+	// Here Implement Hash algorithm
+	}
+});
+```
 
 
 ## Pull request steps
@@ -165,8 +191,8 @@ HmacBtn.addActionListener(new ActionListener() {
 
 
 ## Group Members
-- Nawaf Al-Noweisri
-- Abdullah Al-Saab
-- Abdullah Al-Fawaz
+- Nawaf Al-Noweisri 44
+- Abdullah Al-Saab 44
+- Abdullah Al-Fawaz 44
 
 
