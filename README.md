@@ -3,13 +3,7 @@
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-OverView)
-  - [Encryption and Decryption Zones](#Encryption-and-Decryption-Zones)
-  - [Algorithm Selection](#Algorithm-Selection)
-  - [Result Display](#Result-Display)
-  - [File Saving Functionality](#File-Saving-Functionality)
 - [Integration Guide](#Integration-Guide)
-  - [Opening Files](#opening-files)
-  - [Saving Files](#saving-files)
 - [Integration Guide](#Integration-Guide)
 - [Tips for Editing Code](#Tips-for-Editng-code)
  	- [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
@@ -19,7 +13,7 @@
 )
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
-As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repositery introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
+As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
  that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors, contributers can contribute by uploading their own encryption algorithms through GitHub. 
 
 
