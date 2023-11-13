@@ -85,6 +85,7 @@ Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
 
 2. Go to the top right and Click Fork Button
+![Screenshot 2023-11-13 215108](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/78968f87-2215-437d-9c4c-e498f51f1512)
 
 3. Make sure that the "Copy the main branch only" button is selected, then Click the Create Fork Button 
 
