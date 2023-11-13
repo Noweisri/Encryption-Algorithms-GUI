@@ -10,8 +10,9 @@
 - [Integration Guide](#Integration-Guide)
   - [Opening Files](#opening-files)
   - [Saving Files](#saving-files)
-- [Support](#support)
-- [Authors and Acknowledgement](#authors-and-acknowledgement)
+- [Integration Guide](#Integration-Guide)
+- [Tips for Editng Code](#Tips-for-Editng-code)
+)
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
 As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repostery  introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through Java application using the WindowBuilder tool 
@@ -90,12 +91,12 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 5. Add your Changes On the Code ( To Know How to Add your Algorithm Click [Here](#Add-Algorithm)
 
-## Add Algorithm :
+## Tips for Editng Code:
 1. 
 
 ## Group Members
-Nawaf 
-Abdullah
-Abdullah
+- Nawaf Al-Noweisri
+- Abdullah Al-Saab
+- Abdullah Al-Fawaz
 
 
