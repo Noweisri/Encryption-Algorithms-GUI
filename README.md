@@ -2,7 +2,7 @@
 ## Table OF Contents
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
-- [Interface OverView](#Interface-OverView)
+- [Interface Overview](#Interface-OverView)
   - [Encryption and Decryption Zones](#Encryption-and-Decryption-Zones)
   - [Algorithm Selection](#Algorithm-Selection)
   - [Result Display](#Result-Display)
@@ -11,12 +11,12 @@
   - [Opening Files](#opening-files)
   - [Saving Files](#saving-files)
 - [Integration Guide](#Integration-Guide)
-- [Tips for Editng Code](#Tips-for-Editng-code)
+- [Tips for Editing Code](#Tips-for-Editng-code)
 )
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
-As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repostery  introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through Java application using the WindowBuilder tool 
- that amalgamates diverse cryptographic algorithms such as RSA, AES, and others related operations, implemented by contributors,  contributers can contribute by uploading their own encryption algorithms through GitHub. 
+As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
+ that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors,  contributers can contribute by uploading their own encryption algorithms through GitHub. 
 
 
 ## Importance of the Platform:
@@ -45,14 +45,14 @@ As the demand for secure information transfer grows, the need for a unified plat
 
 ## Getting Started
 
-## Interface OverView
+## Interface Overview
 
 Our Graphic User Interface (GUI) has been meticulously crafted to provide users with an effortless and comprehensive experience in managing cryptographic operations. The platform is structured around a straightforward process, offering dedicated spaces for encryption and decryption, algorithm selection, key management, and result handling.
 
 
 1. Encryption and Decryption Zones:
    
-The interface features distinct sections for encryption and decryption, ensuring clarity in user intentions.
+The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
 Users can seamlessly switch between encryption and decryption modes, streamlining the process based on their specific requirements.
 
 2. Algorithm Selection:
@@ -83,17 +83,17 @@ The GUI design ensures that users, regardless of their cryptographic expertise, 
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
 
-2. Go to top Right and Click Fork Button
+2. Go to the top right and Click Fork Button
 
-3. Make sure that "Copy the main branch only" button is selected, then Click Create Fork Button 
+3. Make sure that the "Copy the main branch only" button is selected, then Click the Create Fork Button 
 
 4. Now you have your Own Version Of the Code
 
-5. Add your Changes On the Code ( To Know How to Add your Algorithm Click [Here](#Tips-for-editng-code)
+5. Add your Changes On the Code ( To Know How to Add your Algorithm Click [Here](#Tips-for-editng-code) )
 
 ## Tips for editing code:
 
-###How to add your algorithm to drop-menu list 
+### How to add your algorithm to the drop-menu list 
 ```Java
 Object[][] ArrayOfAlgorithms = {
 			{ "Example Algorithm", }, // Algorithm name, String
@@ -101,18 +101,18 @@ Object[][] ArrayOfAlgorithms = {
 			{ 1, } // Maximum number of keys of your algorithm, Integer
 	};
 ```
-###How to get key values
+### How to get key values
 ```Java
 getKeyValue() // Call this method, it will return an array of key values
 ```
 
-###Displaying error
+### Displaying error
 try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
 ```java
 Error("Add here the text of your error")
 ```
 
-###How to link your algorithm to buttons
+### How to link your algorithm to buttons
 After implementing your algorithm in a separate method, you must perform the next two steps
 
 ```java
