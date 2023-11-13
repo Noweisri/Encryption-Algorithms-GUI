@@ -47,8 +47,6 @@ As the demand for secure information transfer grows, the need for a unified plat
   - Window builder <sub> Java GUI designer tool that allows you to create Java GUI applications without writing any code </sub>
   - Eclipse IDE
 
-## Getting Started
-
 ## Interface Overview
 
 Our Graphic User Interface (GUI) has been meticulously crafted to provide users with an effortless and comprehensive experience in managing cryptographic operations. The platform is structured around a straightforward process, offering dedicated spaces for encryption and decryption, algorithm selection, key management, and result handling.
