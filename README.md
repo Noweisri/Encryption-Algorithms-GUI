@@ -89,13 +89,16 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 4. Now you have your Own Version Of the Code
 ![Screenshot 2023-11-13 215404](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8a02d105-a223-4ae5-aed9-20798f2576e6)
+
 ![Screenshot 2023-11-13 220133](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8b1d129a-38df-4244-babe-74936706f14a)
+
 ![Screenshot 2023-11-13 220147](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/142e6576-5cff-4489-a30c-42ee61b6d4ad)
+
 ![Screenshot 2023-11-13 220236](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/53acc808-415b-422f-9b67-79544a0f1dfd)
 
-5. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
+6. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
 
-6. After you finish your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
+7. After you finish your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
 
 
 ## Tips for editing code:
@@ -188,6 +191,13 @@ HashBtn.addActionListener(new ActionListener() {
 ## Pull request steps
 1. You Should to push your code on githup by git
 2. then make pull request to we get your code solution as the figure
+![Screenshot 2023-11-13 230808](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/362e7c00-3410-4748-b641-8bbe55b53eb3)
+
+![Screenshot 2023-11-13 231139](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/14f794c5-0823-4bcb-a516-7d02c5aca0a9)
+
+![Screenshot 2023-11-13 231159](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/16339e3c-84c5-4418-a43c-cc06aa139774)
+
+![Screenshot 2023-11-13 231434](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/51021b4b-833a-4acf-8be3-46e560220f56)
 
 
 ## Group Members
