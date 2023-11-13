@@ -12,6 +12,7 @@
   - [Saving Files](#saving-files)
 - [Integration Guide](#Integration-Guide)
 - [Tips for Editing Code](#Tips-for-Editng-code)
+	- [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
 )
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
