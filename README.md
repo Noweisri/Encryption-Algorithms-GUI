@@ -99,10 +99,10 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 ![Screenshot 2023-11-13 220236](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/53acc808-415b-422f-9b67-79544a0f1dfd)
 
-6. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
+6. Add your Changes To the Code, To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code).
 
-7. After you finish your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
-
+7. After you finish the code, upload the project and merge it with ours [here](#Upload-Project-Guide).
+   
 
 ## Tips for editing code
 
