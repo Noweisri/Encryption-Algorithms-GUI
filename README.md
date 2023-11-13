@@ -121,7 +121,7 @@ After implementing your algorithm in a separate method, you must perform the nex
 // Decrypt button
 JButton DecBtn = new JButton("Decrypt");
 DecBtn.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent e) {
+   public void actionPerformed(ActionEvent e) {
 	switch (ChooseAlgorithm.getSelectedItem().toString()) {
 		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
 		// Call here your algorithm function
@@ -134,10 +134,10 @@ public void actionPerformed(ActionEvent e) {
 // Encrypt button
 JButton EncBtn = new JButton("Encrypt");
 EncBtn.addActionListener(new ActionListener() {
-	public void actionPerformed(ActionEvent e) {
-		switch (ChooseAlgorithm.getSelectedItem().toString()) {
-			case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
-			// Call here your algorithm function
+   public void actionPerformed(ActionEvent e) {
+	switch (ChooseAlgorithm.getSelectedItem().toString()) {
+		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
+		// Call here your algorithm function
 		break;
 		}
 	}
@@ -151,6 +151,24 @@ JButton HmacBtn = new JButton("HMAC");
 HmacBtn.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 	// Here implement HMAC Algorithm
+	}
+});
+```
+```Java
+// Digital Signiture Button
+JButton DSBtn = new JButton("Digital Signiture");
+DSBtn.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+	// Here implement Digital Signutre Algorithm
+	}
+});
+```
+```Java
+// Hash Button
+JButton HashBtn = new JButton("HASH");
+HashBtn.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+	// Here Implement Hash algorithm
 	}
 });
 ```
