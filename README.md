@@ -81,6 +81,7 @@ The GUI design ensures that users, regardless of their cryptographic expertise, 
 ## Integration Guide:
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
+![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
 
 2. Go to top Right and Click Fork Button
 
