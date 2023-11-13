@@ -79,7 +79,7 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 	  Users progress through the encryption or decryption process with a logical and step-by-step workflow, minimizing the potential for errors.
 	The GUI design ensures that users, regardless of their cryptographic expertise, can navigate through the platform intuitively and perform complex operations with ease.
 
-## Download Project Guide :
+## Download Project Guide
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
 ![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
@@ -104,7 +104,7 @@ Here We'll Speak About How To get your Own Copy of the Code
 7. After you finish your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
 
 
-## Tips for editing code:
+## Tips for editing code
 
 ### How to add your algorithm to the drop-menu list 
 ```Java
