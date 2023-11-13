@@ -178,6 +178,9 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Pull request steps
+1. You Should to push your code on githup by git
+2. then make pull request to we get your code solution as the figure
+
 
 ## Group Members
 - Nawaf Al-Noweisri
