@@ -131,7 +131,7 @@ results.SetText("Write here the results of your method")
 ```
 
 ### Link your algorithm to encrypt and decrypt buttons
-After implementing your algorithm in a separate method, you must perform the next two steps.
+After implementing your algorithm within a method, you must perform the next two steps.
 
 IMPORTANT, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
 
