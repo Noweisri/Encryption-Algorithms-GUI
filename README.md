@@ -98,10 +98,10 @@ Here We'll Speak About How To get your Own Copy of the Code
 ### How to add your algorithm to the drop-menu list 
 ```Java
 Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", }, // Algorithm name, String
-			{ "Example Brief", }, // Algorithm brief (also write the required format of writing the keys), String
-			{ 1, } // Maximum number of keys of your algorithm, Integer
-	};
+	{ "Example Algorithm", }, // Algorithm name, String
+	{ "Example Brief", }, // Algorithm brief (also write the required format of writing the keys), String
+	{ 1, } // Maximum number of keys of your algorithm, Integer
+};
 ```
 ### How to get key values
 ```Java
