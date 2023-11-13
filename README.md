@@ -3,7 +3,7 @@
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-OverView)
-- [Integration Guide](#Integration-Guide)
+
 
 - [Tips for Editing Code](#Tips-for-Editng-code)
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
@@ -12,6 +12,8 @@
   - [Display results](#Display-results)
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
   - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
+- [Pull Request Steps](#Pull-Request-Steps)
+- [Group Members](#Group-Members)
   
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
@@ -191,7 +193,7 @@ HashBtn.addActionListener(new ActionListener() {
 ```
 
 
-## Pull request steps
+## Pull Request Steps
 1. You Should to push your code on githup by git
 2. then make pull request to we get your code solution as the figure
 ![Screenshot 2023-11-13 230808](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/362e7c00-3410-4748-b641-8bbe55b53eb3)
@@ -204,8 +206,8 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Group Members
-- Nawaf Al-Noweisri 44
-- Abdullah Al-Saab 44
-- Abdullah Al-Fawaz 44
+- Nawaf Al-Noweisri 
+- Abdullah Al-Saab 
+- Abdullah Al-Fawaz 
 
 
