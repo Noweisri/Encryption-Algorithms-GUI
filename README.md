@@ -54,32 +54,33 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 
 1. Encryption and Decryption Zones:
    
-		The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
+	  The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
 	Users can seamlessly switch between encryption and decryption modes, streamlining the process based on their specific requirements.
 
 2. Algorithm Selection:
    
-	A user-friendly dropdown menu allows users to choose from a variety of cryptographic algorithms, including RSA, AES, and others.
+	  A user-friendly dropdown menu allows users to choose from a variety of cryptographic algorithms, including RSA, AES, and others.
 	This empowers users to tailor their security measures according to the specific needs of their data, whether it be asymmetric encryption with RSA or symmetric encryption with AES.
-3. Key Management:
+
+4. Key Management:
    
-Recognizing the diverse requirements of users, our GUI allows for the input of multiple keys, facilitating compatibility with various cryptographic algorithms.
-Dedicated buttons for adding, managing, and removing keys ensure flexibility and adaptability to different encryption scenarios.
+	  Recognizing the diverse requirements of users, our GUI allows for the input of multiple keys, facilitating compatibility with various cryptographic algorithms.
+	Dedicated buttons for adding, managing, and removing keys ensure flexibility and adaptability to different encryption scenarios.
 
 4. Result Display:
    
-A visually intuitive results box provides users with real-time feedback on their cryptographic operations.
-Whether encrypting or decrypting, users can instantly view and assess the outcome, promoting transparency and confidence in the chosen algorithms and keys.
+	  A visually intuitive results box provides users with real-time feedback on their cryptographic operations.
+	Whether encrypting or decrypting, users can instantly view and assess the outcome, promoting transparency and confidence in the chosen algorithms and keys.
 
 5. File Saving Functionality:
    
-The platform features a dedicated Save File button, allowing users to preserve their encrypted or decrypted data effortlessly.
-This streamlined file-saving process enhances the user's ability to secure and manage their cryptographic results seamlessly.
+	  The platform features a dedicated Save File button, allowing users to preserve their encrypted or decrypted data effortlessly.
+	This streamlined file-saving process enhances the user's ability to secure and manage their cryptographic results seamlessly.
 
 6. Efficient Workflow:
    
-Users progress through the encryption or decryption process with a logical and step-by-step workflow, minimizing the potential for errors.
-The GUI design ensures that users, regardless of their cryptographic expertise, can navigate through the platform intuitively and perform complex operations with ease.
+	  Users progress through the encryption or decryption process with a logical and step-by-step workflow, minimizing the potential for errors.
+	The GUI design ensures that users, regardless of their cryptographic expertise, can navigate through the platform intuitively and perform complex operations with ease.
 
 ## Integration Guide:
 Here We'll Speak About How To get your Own Copy of the Code
