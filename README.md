@@ -4,9 +4,9 @@
 ## Introduction
   Encryption Algorithm GUI is a Java application built using the WindowBuilder tool. It allows users to encrypt and decrypt text using encryption algorithms implemented by contributors, contributers can contribute by uploading their own encryption algorithms through GitHub.
 
-  ## Tools used
+## Tools used
   - Java programming language
-  - Window builder
-  - Eclips
+  - Window builder<sub>Java GUI designer tool that allows you to create Java GUI applications without writing any code</sub>
+  - Eclipse IDE
 
-    ## Getting Started
+## Getting Started
