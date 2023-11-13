@@ -94,6 +94,9 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 5. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
 
+6. After you finsh of your task. you have to push your code on GitHup and make pull request [as in pull request steps](#Pull-request-steps)  
+
+
 ## Tips for editing code:
 
 ### How to add your algorithm to the drop-menu list 
@@ -174,6 +177,8 @@ HashBtn.addActionListener(new ActionListener() {
 });
 ```
 
+
+## Pull request steps
 
 ## Group Members
 - Nawaf Al-Noweisri
