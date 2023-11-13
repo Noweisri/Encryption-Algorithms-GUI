@@ -1,1 +1,1 @@
-# Encryption-Algorithms-GUI
+# Encryption Algorithms GUI <sub>CSC429 - Computer Security Project</sub>
