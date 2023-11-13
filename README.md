@@ -9,7 +9,9 @@
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
   - [How to get key values](#How-to-get-key-values)
   - [Displaying error](#Displaying-error)
+  - [Display results](#Display-results)
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
+  - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
   
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
