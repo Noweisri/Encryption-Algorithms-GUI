@@ -87,6 +87,9 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 4. Now you have your Own Version Of the Code
 ![Screenshot 2023-11-13 215404](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8a02d105-a223-4ae5-aed9-20798f2576e6)
+![Screenshot 2023-11-13 220133](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8b1d129a-38df-4244-babe-74936706f14a)
+![Screenshot 2023-11-13 220147](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/142e6576-5cff-4489-a30c-42ee61b6d4ad)
+![Screenshot 2023-11-13 220236](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/53acc808-415b-422f-9b67-79544a0f1dfd)
 
 5. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
 
