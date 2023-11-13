@@ -71,10 +71,9 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ 1, 2, 3, 4 }, // Algorithm place
-			{ "RSA", "HMAC", "Orange" }, // Algorithm name
-			{ "I love RSA", "I love HMAC", "I love Orange" }, // Algorithm brief
-			{ 2, 3, 2, 1 } // Maximum keys of an algorithm
+			{ "Example Algorithm", }, // Algorithm name , String
+			{ "Example Brief", }, // Algorithm brief , String
+			{ 1, } // Maximum keys of an algorithm , Integer
 	};
 
 	// Lunch the program
@@ -113,22 +112,22 @@ public class MainFrame extends JFrame {
 		JComboBox ChooseAlgorithm = new JComboBox();
 		ChooseAlgorithm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				for (int j = 0; j < ArrayOfAlgorithms[1].length; j++) {
-					if (ArrayOfAlgorithms[1][j].equals(ChooseAlgorithm.getSelectedItem())) {
+				for (int j = 0; j < ArrayOfAlgorithms[0].length; j++) {
+					if (ArrayOfAlgorithms[0][j].equals(ChooseAlgorithm.getSelectedItem())) {
 						columnIndex = j;
 						break;
 					}
 				}
-				Object valueUnderneath = ArrayOfAlgorithms[2][columnIndex];
+				Object valueUnderneath = ArrayOfAlgorithms[1][columnIndex];
 				brief.setText((String) valueUnderneath);
-				MAX_KEY = (int) ArrayOfAlgorithms[3][columnIndex];
+				MAX_KEY = (int) ArrayOfAlgorithms[2][columnIndex];
 				System.out.print(MAX_KEY);
 
 			}
 		});
 		ChooseAlgorithm.setBounds(39, 103, 512, 48);
 		contentPane.add(ChooseAlgorithm);
-		for (Object element : ArrayOfAlgorithms[1]) {
+		for (Object element : ArrayOfAlgorithms[0]) {
 			ChooseAlgorithm.addItem(element);
 		}
 
@@ -190,21 +189,37 @@ public class MainFrame extends JFrame {
 		openbtn.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		contentPane.add(openbtn);
 
+		// Decrypt button
 		JButton DecBtn = new JButton("Decrypt");
+		DecBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				switch (ChooseAlgorithm.getSelectedItem().toString()) {
+					case "Example Algorithm": // write here the same name that you wrote in line 74
+						// Call here you algorithm function
+						break;
+				}
+			}
+		});
 		DecBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
 		DecBtn.setBounds(298, 612, 134, 57);
 		contentPane.add(DecBtn);
 
+		// Encrypt button
 		JButton EncBtn = new JButton("Encrypt");
 		EncBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				switch (ChooseAlgorithm.getSelectedItem().toString()) {
+					case "Example Algorithm": // write here the same name that you wrote in line 74
+						// Call here your algorithm function
+						break;
+				}
 			}
 		});
 		EncBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
 		EncBtn.setBounds(139, 612, 134, 57);
 		contentPane.add(EncBtn);
 
+		// HMAC Button
 		JButton HmacBtn = new JButton("HMAC");
 		HmacBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -215,6 +230,7 @@ public class MainFrame extends JFrame {
 		HmacBtn.setBounds(426, 680, 108, 40);
 		contentPane.add(HmacBtn);
 
+		// Hash Button
 		JButton HashBtn = new JButton("HASH");
 		HashBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -225,6 +241,7 @@ public class MainFrame extends JFrame {
 		HashBtn.setBounds(50, 680, 108, 40);
 		contentPane.add(HashBtn);
 
+		// Digital Signiture Button
 		JButton DSBtn = new JButton("Digital Signiture");
 		DSBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
