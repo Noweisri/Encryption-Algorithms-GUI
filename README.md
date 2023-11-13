@@ -3,8 +3,7 @@
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-OverView)
-
-
+- [Download Project Guide](#Download-Project-Guide)
 - [Tips for Editing Code](#Tips-for-Editng-code)
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
   - [How to get key values](#How-to-get-key-values)
@@ -12,7 +11,7 @@
   - [Display results](#Display-results)
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
   - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
-- [Pull Request Steps](#Pull-Request-Steps)
+- [Upload Project Guide](#Upload-Project-Guide)
 - [Group Members](#Group-Members)
   
 ## Introduction
@@ -80,7 +79,7 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 	  Users progress through the encryption or decryption process with a logical and step-by-step workflow, minimizing the potential for errors.
 	The GUI design ensures that users, regardless of their cryptographic expertise, can navigate through the platform intuitively and perform complex operations with ease.
 
-## Integration Guide:
+## Download Project Guide <sub>Using Fork</sub> :
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
 ![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
@@ -174,11 +173,11 @@ HmacBtn.addActionListener(new ActionListener() {
 });
 ```
 ```Java
-// Digital Signiture Button
-JButton DSBtn = new JButton("Digital Signiture");
+// Digital Signature Button
+JButton DSBtn = new JButton("Digital Signature");
 DSBtn.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-	// Here implement Digital Signutre Algorithm
+	// Here implement the Digital Signature Algorithm
 	}
 });
 ```
@@ -187,15 +186,15 @@ DSBtn.addActionListener(new ActionListener() {
 JButton HashBtn = new JButton("HASH");
 HashBtn.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
-	// Here Implement Hash algorithm
+	// Here Implement the Hash algorithm
 	}
 });
 ```
 
 
-## Pull Request Steps
-1. You Should to push your code on githup by git
-2. then make pull request to we get your code solution as the figure
+## Upload Project Guide <sub>Using pull request</sub>
+1. You Should push your code on GitHub by git
+2. then make a pull request to get your code solution as the figure
 ![Screenshot 2023-11-13 230808](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/362e7c00-3410-4748-b641-8bbe55b53eb3)
 
 ![Screenshot 2023-11-13 231139](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/14f794c5-0823-4bcb-a516-7d02c5aca0a9)
@@ -206,8 +205,8 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Group Members
-- Nawaf Al-Noweisri 
-- Abdullah Al-Saab 
-- Abdullah Al-Fawaz 
+- [Nawaf Al-Noweisri](https://github.com/Noweisri) 
+- [Abdullah Al-Saab]() 
+- [Abdullah Al-Fawaz]()
 
 
