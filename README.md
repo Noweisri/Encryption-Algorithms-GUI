@@ -4,7 +4,7 @@
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-Overview)
 - [Download Project Guide](#Download-Project-Guide)
-- [Tips for Editing Code](#Tips-for-Editng-code)
+- [Tips for editing Code](#Tips-for-Editng-code)
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
   - [How to get key values](#How-to-get-key-values)
   - [Displaying error](#Displaying-error)
