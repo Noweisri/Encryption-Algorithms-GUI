@@ -8,7 +8,7 @@
  	- [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
    	- [How to get key values](How-to-get-key-values)
   	- [Displaying error](Displaying-error)
-  	- [Link your algorithm to encrypt & decrypt buttons](Link-your-algorithm-to-encrypt-&-decrypt-buttons)
+  	- [Link your algorithm to encrypt and decrypt buttons](Link-your-algorithm-to-encrypt-and-decrypt-buttons)
 
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
@@ -114,7 +114,7 @@ try to show errors in all the scenarios, when the user types the Text/key in the
 Error("Add here the text of your error")
 ```
 
-### Link your algorithm to encrypt & decrypt buttons
+### Link your algorithm to encrypt and decrypt buttons
 After implementing your algorithm in a separate method, you must perform the next two steps
 
 ```java
