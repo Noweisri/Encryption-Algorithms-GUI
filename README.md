@@ -1,5 +1,5 @@
 # Encryption Algorithms GUI <sub>CSC429 - Computer Security Project</sub>
-## Table OF Contents
+## Table of contents
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-OverView)
