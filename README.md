@@ -19,14 +19,14 @@
 )
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
-As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
- that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors,  contributers can contribute by uploading their own encryption algorithms through GitHub. 
+As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repositery introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
+ that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors, contributers can contribute by uploading their own encryption algorithms through GitHub. 
 
 
 ## Importance of the Platform:
 
 - Versatility and Interoperability:
-    Our platform addresses the challenge of managing multiple cryptographic algorithms by providing a centralized interface, allowing users to seamlessly navigate       through various protocols. This versatility enhances interoperability across different systems and applications.
+    Our platform addresses the challenge of managing multiple cryptographic algorithms by providing a centralized interface, allowing users to seamlessly navigate through various protocols. This versatility enhances interoperability across different systems and applications.
 
 - Security Enhancement:
    By consolidating a spectrum of cryptographic algorithms, the platform empowers users with the ability to select and combine protocols strategically.
@@ -94,7 +94,7 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 4. Now you have your Own Version Of the Code
 
-5. Add your Changes On the Code ( To Know How to Add your Algorithm Click [Here](#Tips-for-editng-code) )
+5. Add your Changes To the Code ( To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code) )
 
 ## Tips for editing code:
 
