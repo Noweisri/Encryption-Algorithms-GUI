@@ -2,7 +2,7 @@
 ## Table of contents
 - [Introduction ](#Introduction)
 - [Importance of the Platform](#Importance-of-the-Platform)
-- [Interface Overview](#Interface-OverView)
+- [Interface Overview](#Interface-Overview)
 - [Download Project Guide](#Download-Project-Guide)
 - [Tips for Editing Code](#Tips-for-Editng-code)
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
@@ -20,7 +20,7 @@ As the demand for secure information transfer grows, the need for a unified plat
  that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors, contributers can contribute by uploading their own encryption algorithms through GitHub. 
 
 
-## Importance of the Platform:
+## Importance of the Platform
 
 - Versatility and Interoperability:
     Our platform addresses the challenge of managing multiple cryptographic algorithms by providing a centralized interface, allowing users to seamlessly navigate through various protocols. This versatility enhances interoperability across different systems and applications.
