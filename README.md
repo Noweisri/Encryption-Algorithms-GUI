@@ -6,7 +6,7 @@
 
 ## Tools used
   - Java programming language
-  - Window builder<sub>Java GUI designer tool that allows you to create Java GUI applications without writing any code</sub>
+  - Window builder <sub> Java GUI designer tool that allows you to create Java GUI applications without writing any code </sub>
   - Eclipse IDE
 
 ## Getting Started
