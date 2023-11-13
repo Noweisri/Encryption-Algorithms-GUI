@@ -79,7 +79,7 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 	  Users progress through the encryption or decryption process with a logical and step-by-step workflow, minimizing the potential for errors.
 	The GUI design ensures that users, regardless of their cryptographic expertise, can navigate through the platform intuitively and perform complex operations with ease.
 
-## Download Project Guide <sub>Using Fork</sub> :
+## Download Project Guide :
 Here We'll Speak About How To get your Own Copy of the Code
 1. You must have a Github Account 
 ![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
@@ -192,7 +192,7 @@ HashBtn.addActionListener(new ActionListener() {
 ```
 
 
-## Upload Project Guide <sub>Using pull request</sub>
+## Upload Project Guide
 1. You Should push your code on GitHub by git
 2. then make a pull request to get your code solution as the figure
 ![Screenshot 2023-11-13 230808](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/362e7c00-3410-4748-b641-8bbe55b53eb3)
