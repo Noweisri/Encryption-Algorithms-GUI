@@ -207,6 +207,6 @@ HashBtn.addActionListener(new ActionListener() {
 ## Group Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 
-- [Abdullah Al-Fawaz]()
+- [Abdullah Al-Fawaz](https://github.com/AboFawaz0)
 
 
