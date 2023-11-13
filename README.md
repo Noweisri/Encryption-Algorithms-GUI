@@ -4,10 +4,10 @@
 - [Importance of the Platform](#Importance-of-the-Platform)
 - [Interface Overview](#Interface-Overview)
 - [Download Project Guide](#Download-Project-Guide)
-- [Tips for editing Code](#Tips-for-editng-code)
+- [Tips for editing code](#Tips-for-editing-code)
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
   - [How to get key values](#How-to-get-key-values)
-  - [Displaying error](#Displaying-error)
+  - [Display error](#Display-error)
   - [Display results](#Display-results)
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
   - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
@@ -17,7 +17,7 @@
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
 As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
- that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors, contributers can contribute by uploading their own encryption algorithms through GitHub. 
+ that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors, contributors can contribute by uploading their own encryption algorithms through GitHub. 
 
 
 ## Importance of the Platform
@@ -119,7 +119,7 @@ Object[][] ArrayOfAlgorithms = {
 getKeyValue() // Call this method, it will return an array of key values
 ```
 
-### Displaying error
+### Display error
 Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
 
 ```java
