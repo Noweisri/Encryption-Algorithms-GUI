@@ -54,8 +54,8 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 
 1. Encryption and Decryption Zones:
    
-	The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
-Users can seamlessly switch between encryption and decryption modes, streamlining the process based on their specific requirements.
+		The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
+	Users can seamlessly switch between encryption and decryption modes, streamlining the process based on their specific requirements.
 
 2. Algorithm Selection:
    
