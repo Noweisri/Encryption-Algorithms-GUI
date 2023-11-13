@@ -54,13 +54,13 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 
 1. Encryption and Decryption Zones:
    
-The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
+	The interface features distinct sections for encryption and decryption, ensuring clarity of user intentions.
 Users can seamlessly switch between encryption and decryption modes, streamlining the process based on their specific requirements.
 
 2. Algorithm Selection:
    
-A user-friendly dropdown menu allows users to choose from a variety of cryptographic algorithms, including RSA, AES, and others.
-This empowers users to tailor their security measures according to the specific needs of their data, whether it be asymmetric encryption with RSA or symmetric encryption with AES.
+	A user-friendly dropdown menu allows users to choose from a variety of cryptographic algorithms, including RSA, AES, and others.
+	This empowers users to tailor their security measures according to the specific needs of their data, whether it be asymmetric encryption with RSA or symmetric encryption with AES.
 3. Key Management:
    
 Recognizing the diverse requirements of users, our GUI allows for the input of multiple keys, facilitating compatibility with various cryptographic algorithms.
