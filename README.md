@@ -82,13 +82,13 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 
 ## Download Project Guide
 Here We'll Speak About How To get your Own Copy of the Code
-1. You must have a Github Account 
+1. You must have a `Github` Account 
 ![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
 
-2. Go to the top right and Click Fork Button
+2. Go to the top right and Click `Fork` Button
 ![Screenshot 2023-11-13 215108](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/78968f87-2215-437d-9c4c-e498f51f1512)
 
-3. Make sure that the "Copy the main branch only" button is selected, then Click the Create Fork Button 
+3. Make sure that the `Copy the main branch only` button is selected, then Click the Create `Fork` Button 
 ![Screenshot 2023-11-13 215238](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/95296f97-e8d6-4378-ad1c-092a48c7b407)
 
 4. Now you have your Own Version Of the Code
@@ -102,7 +102,7 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 6. Add your Changes To the Code, To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code).
 
-7. After you finish the code, upload the project and merge it with ours [here](#Upload-Project-Guide).
+7. After you finish the code, upload the project and merge it with ours, to know how click [here](#Upload-Project-Guide).
    
 
 ## Tips for editing code
@@ -139,7 +139,7 @@ results.getText("Write here the results of your method")
 ### Link your algorithm to encrypt and decrypt buttons
 After implementing your algorithm within a method, you must perform the next two steps.
 
-IMPORTANT, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
+`IMPORTANT` , it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
 
 ```java
 // Decrypt button
@@ -199,8 +199,8 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Upload Project Guide
-1. You Should push your code on GitHub by git
-2. then make a pull request to get your code solution as the figure
+1. You Should push your code on `GitHub` using `git`
+2. then make a `pull request` to get your code solution as the figure
 ![Screenshot 2023-11-13 230808](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/362e7c00-3410-4748-b641-8bbe55b53eb3)
 
 ![Screenshot 2023-11-13 231139](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/14f794c5-0823-4bcb-a516-7d02c5aca0a9)
