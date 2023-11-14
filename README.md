@@ -7,6 +7,7 @@
 - [Tips for editing code](#Tips-for-editing-code)
   - [How to add your algorithm to the drop-menu list](#How-to-add-your-algorithm-to-the-drop-menu-list)
   - [How to get key values](#How-to-get-key-values)
+  - [How to get User input text values](#How-to-get-User-input-text-values)
   - [Display error](#Display-error)
   - [Display results](#Display-results)
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
@@ -119,15 +120,20 @@ Object[][] ArrayOfAlgorithms = {
 getKeyValue() // Call this method, it will return an array of key values
 ```
 
+### How to get User input text values
+```Java
+String plain_text = inputtext.getText() // now you stored user input into plain_text variable
+```
+
 ### Display error
 Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
 
 ```java
-Error("Add here the text of your error")
+Error("Add here the text of your error") // Just call Error() function with message parameter and it will be displayed to the user
 ```
 ### Display results
 ```Java
-results.SetText("Write here the results of your method")
+results.getText("Write here the results of your method")
 ```
 
 ### Link your algorithm to encrypt and decrypt buttons
