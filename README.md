@@ -42,8 +42,8 @@ As the demand for secure information transfer grows, the need for a unified plat
  
 ## Tools used
   - Java programming language
-  - Window builder <sub> Java GUI designer tool that allows you to create Java GUI applications without writing any code </sub>
-  - Eclipse IDE
+  - `Window builder` <sub> Java GUI designer tool that allows you to create Java GUI applications without writing any code </sub>
+  - `Eclipse IDE`
 
 ## Interface Overview
 
