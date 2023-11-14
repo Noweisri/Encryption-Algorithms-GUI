@@ -145,21 +145,8 @@ results.getText("Write here the results of your method")
 ### Link your algorithm to encrypt and decrypt buttons
 After implementing your algorithm within a method, you must perform the next two steps.
 
-`IMPORTANT` , it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
+`IMPORTANT`, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
 
-```java
-// Decrypt button
-JButton DecBtn = new JButton("Decrypt");
-DecBtn.addActionListener(new ActionListener() {
-   public void actionPerformed(ActionEvent e) {
-	switch (ChooseAlgorithm.getSelectedItem().toString()) {
-		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
-		// Call here your algorithm function
-	break;
-		}
-	}
-});
-```
 ```java
 // Encrypt button
 JButton EncBtn = new JButton("Encrypt");
@@ -169,6 +156,19 @@ EncBtn.addActionListener(new ActionListener() {
 		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
 		// Call here your algorithm function
 		break;
+		}
+	}
+});
+```
+```java
+// Decrypt button
+JButton DecBtn = new JButton("Decrypt");
+DecBtn.addActionListener(new ActionListener() {
+   public void actionPerformed(ActionEvent e) {
+	switch (ChooseAlgorithm.getSelectedItem().toString()) {
+		case "Example Algorithm": // write here the same name of the algorithm that you wrote in line 74
+		// Call here your algorithm function
+	break;
 		}
 	}
 });
