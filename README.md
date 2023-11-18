@@ -145,7 +145,8 @@ results.setText("Write here the results of your algorithm")
 ### Link your algorithm to encrypt and decrypt buttons
 After implementing your algorithm within a method, you must perform the next two steps.
 
-`IMPORTANT`, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
+** _IMPORTANT_, it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)**
+**This text is _extremely_ important**
 
 ```java
 // Encrypt button
