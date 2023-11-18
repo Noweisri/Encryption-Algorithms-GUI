@@ -93,7 +93,8 @@ In this section, you will learn How To get your Own Copy of the Code
 
 
 Now you have your Version Of the Code in your account, below are the steps of how to `Clone` the files into your computer
-There are several ways of `cloning` the repository, follow the steps for one of them
+> [!NOTE]
+>There are several ways of `cloning` the repository, follow the steps for one of them
 
 
 ![Screenshot 2023-11-13 215404](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8a02d105-a223-4ae5-aed9-20798f2576e6)
