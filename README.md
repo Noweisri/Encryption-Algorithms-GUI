@@ -81,21 +81,21 @@ Our Graphic User Interface (GUI) has been meticulously crafted to provide users 
 	The GUI design ensures that users, regardless of their cryptographic expertise, can navigate through the platform intuitively and perform complex operations with ease.
 
 ## Download Project Guide
-Here We'll Speak About How To get your Own Copy of the Code
-1. You must have a `Github` Account
+In this section, you will learn How To get your Own Copy of the Code
+1. Login or create a new `Github` Account
+2. In the top right corner Click the `Fork` Button
    
 ![Screenshot 2023-11-13 215108](https://github.com/abdullahAlsaab/Encryption-Algorithms-GUI/assets/97760612/dcf0848f-1fc6-49ed-88e6-6819d5b39207)
 
-3. Go to the top right and Click `Fork` Button
-   
-![Screenshot 2023-11-13 215108](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/78968f87-2215-437d-9c4c-e498f51f1512)
-
-5. Make sure that the `Copy the main branch only` button is selected, then Click the `Create Fork` Button
+3. Make sure that the `Copy the main branch only` button is selected, then Click the `Create Fork` Button
    
 ![Screenshot 2023-11-13 215238](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/95296f97-e8d6-4378-ad1c-092a48c7b407)
 
-7. Now you have your Version Of the Code
-   
+
+Now you have your Version Of the Code in your account, below are the steps of how to `Clone` the files into your computer
+There are several ways of `cloning` the repository, follow the steps for one of them
+
+
 ![Screenshot 2023-11-13 215404](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8a02d105-a223-4ae5-aed9-20798f2576e6)
 
 ![Screenshot 2023-11-13 220133](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/8b1d129a-38df-4244-babe-74936706f14a)
@@ -106,9 +106,9 @@ Here We'll Speak About How To get your Own Copy of the Code
 
 
 
-6. Add your Changes To the Code, To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code).
+4. Add your Changes To the Code, To Know How to Add your Algorithm Click [Tips for editing code](#Tips-for-editing-code).
 
-7. After you finish the code, upload the project and merge it with ours, to know how click [here](#Upload-Project-Guide).
+5. After you finish the code, upload the project and merge it with ours, to know how click [here](#Upload-Project-Guide).
    
 
 ## Tips for editing code
