@@ -93,6 +93,7 @@ In this section, you will learn How To get your Own Copy of the Code
 
 
 Now you have your Version Of the Code in your account, below are the steps of how to `Clone` the files into your computer
+
 > [!NOTE]
 >There are several ways of `cloning` the repository, follow the steps for one of them
 
@@ -133,7 +134,8 @@ String plain_text = inputtext.getText() // now you stored user input into plain_
 ```
 
 ### Display error
-Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
+> [!TIP]
+>Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
 
 ```java
 Error("Add here the text of your error") // Just call Error() function with message parameter and it will be displayed to the user
@@ -146,7 +148,8 @@ results.setText("Write here the results of your algorithm")
 ### Link your algorithm to encrypt and decrypt buttons
 After implementing your algorithm within a method, you must perform the next two steps.
 
-_IMPORTANT_, **it is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)**
+> [!IMPORTANT]
+>It is better to include a parameter on each button to know where the call came from (from encrypt button or decrypt button)
 
 ```java
 // Encrypt button
