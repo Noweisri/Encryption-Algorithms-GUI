@@ -27,14 +27,48 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 import java.awt.event.ActionEvent;
 import javax.swing.BoxLayout;
 
 public class MainFrame extends JFrame {
+	
+	public static String SHA1_encryption(String input){
+		try {
+			// getInstance() method is called with algorithm SHA-1
+			MessageDigest md = MessageDigest.getInstance("SHA-1");
+
+			// digest() method is called
+			// to calculate message digest of the input string
+			// returned as array of byte
+			byte[] messageDigest = md.digest(input.getBytes());
+
+			// Convert byte array into signum representation
+			BigInteger no = new BigInteger(1, messageDigest);
+
+			// Convert message digest into hex value
+			String hashtext = no.toString(16);
+
+			// Add preceding 0s to make it 32 bit
+			while (hashtext.length() < 32) {
+				hashtext = "0" + hashtext;
+			}
+
+			// return the HashText
+			return hashtext;
+		}
+
+		// For specifying wrong message digest algorithms
+		catch (NoSuchAlgorithmException e) {
+			throw new RuntimeException(e);
+		}
+	}
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -44,7 +78,8 @@ public class MainFrame extends JFrame {
 	private int keyFieldCount = 0;
 	public int columnIndex = 0;
 
-	// Create GUI components
+	// Create GUI components panel_1
+	JPanel panel_1 = new JPanel();
 
 	JTextField inputtext = new JTextField();
 	JLabel results = new JLabel();
@@ -71,11 +106,15 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", }, // Algorithm name , String
-			{ "Example Brief", }, // Algorithm brief , String
+			{ "SHA-1", }, // Algorithm name , String
+			{ "<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. "
+				+ "The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely"
+				+ " difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful"
+				+ " for a variety of applications. For example it can be used to verify the integrity of the data.</html>", }, // Algorithm brief , String
 			{ 1, } // Maximum keys of an algorithm , Integer
 	};
-
+		
+			
 	// Lunch the program
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -194,7 +233,8 @@ public class MainFrame extends JFrame {
 		DecBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				switch (ChooseAlgorithm.getSelectedItem().toString()) {
-					case "Example Algorithm": // write here the same name that you wrote in line 74
+					case "SHA-1": // write here the same name that you wrote in line 74
+						Error("SHA-1 cannot be used to decrypt");
 						// Call here you algorithm function
 						break;
 				}
@@ -209,8 +249,11 @@ public class MainFrame extends JFrame {
 		EncBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				switch (ChooseAlgorithm.getSelectedItem().toString()) {
-					case "Example Algorithm": // write here the same name that you wrote in line 74
-						// Call here your algorithm function
+					case "SHA-1": // write here the same name that you wrote in line 74
+						String plain_text = SHA1_encryption(inputtext.getText());
+
+						results.setText(plain_text);
+// Call here your algorithm function
 						break;
 				}
 			}
@@ -252,7 +295,6 @@ public class MainFrame extends JFrame {
 		DSBtn.setBounds(215, 680, 134, 40);
 		contentPane.add(DSBtn);
 
-		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(null);
 		panel_1.setBackground(new Color(240, 248, 255));
 		panel_1.setBounds(38, 781, 512, 48);
