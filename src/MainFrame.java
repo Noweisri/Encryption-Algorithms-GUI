@@ -38,8 +38,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.BoxLayout;
 
 public class MainFrame extends JFrame {
-	
-	public static String SHA1_encryption(String input){
+
+	public static String SHA1_encryption(String input) {
 		try {
 			// getInstance() method is called with algorithm SHA-1
 			MessageDigest md = MessageDigest.getInstance("SHA-1");
@@ -106,15 +106,15 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "SHA-1", }, // Algorithm name , String
-			{ "<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. "
-				+ "The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely"
-				+ " difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful"
-				+ " for a variety of applications. For example it can be used to verify the integrity of the data.</html>", }, // Algorithm brief , String
-			{ 1, } // Maximum keys of an algorithm , Integer
+			{ "Example Algorithm", "SHA-1", }, // Algorithm name , String
+			{ "Example Brief",
+					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications. For example it can be used to verify the integrity of the data.</html>", }, // Algorithm
+																																																																																																																		// brief
+																																																																																																																		// ,
+																																																																																																																		// String
+			{ 1, 1 } // Maximum keys of an algorithm , Integer
 	};
-		
-			
+
 	// Lunch the program
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -253,7 +253,7 @@ public class MainFrame extends JFrame {
 						String plain_text = SHA1_encryption(inputtext.getText());
 
 						results.setText(plain_text);
-// Call here your algorithm function
+						// Call here your algorithm function
 						break;
 				}
 			}
