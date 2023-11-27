@@ -13,7 +13,7 @@
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
   - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
 - [Upload Project Guide](#Upload-Project-Guide)
-- [Community support (algorithms uploaded)](#Community-support-(algorithms-uploaded))
+- [Community support (algorithms uploaded)](#Community-support-(algorithmsuploaded))
 - [Group Members](#Group-Members)
   
 ## Introduction
