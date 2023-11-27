@@ -46,7 +46,7 @@ As the demand for secure information transfer grows, the need for a unified plat
 
 ## Interface Overview
 
-Our Graphic User Interface (GUI) has been meticulously crafted to provide users with an effortless and comprehensive experience in managing cryptographic operations. The platform is structured around a straightforward process, offering dedicated spaces for encryption and decryption, algorithm selection, key management, and result handling.
+Our Graphic User Interface (GUI) has been meticulously crafted to provide users with an effortless and comprehensive experience in managing cryptographic operations. The platform is structured around a straightforward process, As follows.
 
 
 - Algorithm Selection & Brief about the algorithm
@@ -207,8 +207,10 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Community support (algorithms uploaded)
-- SHA-1
-  by 
+- SHA-1 Algorithm
+  by [fahd192](https://github.com/fahd192)
+
+- HMAC Algorithm
 ## Group Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 
