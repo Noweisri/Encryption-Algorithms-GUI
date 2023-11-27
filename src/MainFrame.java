@@ -29,9 +29,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 import java.awt.event.ActionEvent;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.BoxLayout;
 
 public class MainFrame extends JFrame {
@@ -71,8 +76,9 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", }, // Algorithm name , String
-			{ "Example Brief", }, // Algorithm brief , String
+			{ "HMAC", }, // Algorithm name , String
+			{ "<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.\r\n" + //
+					"\n A key is required </html>", }, // Algorithm brief , String
 			{ 1, } // Maximum keys of an algorithm , Integer
 	};
 
@@ -195,8 +201,6 @@ public class MainFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				switch (ChooseAlgorithm.getSelectedItem().toString()) {
 					case "Example Algorithm": // write here the same name that you wrote in line 74
-						// Call here you algorithm function
-						break;
 				}
 			}
 		});
@@ -210,8 +214,6 @@ public class MainFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				switch (ChooseAlgorithm.getSelectedItem().toString()) {
 					case "Example Algorithm": // write here the same name that you wrote in line 74
-						// Call here your algorithm function
-						break;
 				}
 			}
 		});
@@ -224,8 +226,27 @@ public class MainFrame extends JFrame {
 		HmacBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Here implement HMAC Algorithm
+				try {
+            String algorithmName = "HMAC";  // Replace with your algorithm name
+
+            // Check if the selected algorithm is HMAC
+            if (ChooseAlgorithm.getSelectedItem().toString().equals(algorithmName)) {
+               
+                String hmacResult = Hmac();
+                
+                // Display results
+                results.setText(hmacResult);
+            } else {
+                
+                Error("Please select the HMAC algorithm");
+            }
+        } catch (Exception ex) {
+            // Display an error for any unexpected exception
+            Error("An error occurred: " + ex.getMessage());
+        }
+    }
 			}
-		});
+		);
 		HmacBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		HmacBtn.setBounds(426, 680, 108, 40);
 		contentPane.add(HmacBtn);
@@ -321,4 +342,26 @@ public class MainFrame extends JFrame {
 		});
 
 	}
+
+	public String Hmac() throws NoSuchAlgorithmException, InvalidKeyException{
+    String key = getKeyValue()[0];  // Get the key value
+
+    Mac mac = Mac.getInstance("HmacSHA256");
+    SecretKeySpec secretKey = new SecretKeySpec(key.getBytes(), "HmacSHA256");
+    mac.init(secretKey);
+
+    String plainText = inputtext.getText();  // Get user input
+
+    // Calculate HMAC
+    byte[] hmacInBytes = mac.doFinal(plainText.getBytes());
+
+    // Convert bytes to string
+    StringBuilder stringBuilder = new StringBuilder();
+    for (byte b : hmacInBytes) {
+        stringBuilder.append(String.format("%02x", b));
+    }
+
+    // Return result and key
+    return stringBuilder.toString();
+}
 }
