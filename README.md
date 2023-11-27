@@ -211,6 +211,7 @@ HashBtn.addActionListener(new ActionListener() {
   by [fahd192](https://github.com/fahd192)
 
 - HMAC Algorithm
+   by [AbdulrahmanAlwazzan](https://github.com/AbdulrahmanAlwazzan)
 ## Group Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 
