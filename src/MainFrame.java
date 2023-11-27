@@ -35,6 +35,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 import java.awt.event.ActionEvent;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.BoxLayout;
 
 public class MainFrame extends JFrame {
@@ -106,13 +109,14 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", "SHA-1", }, // Algorithm name , String
+			{ "Example Algorithm", "SHA-1", "HMAC", }, // Algorithm name , String
 			{ "Example Brief",
-					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications. For example it can be used to verify the integrity of the data.</html>", }, // Algorithm
-																																																																																																																		// brief
-																																																																																																																		// ,
-																																																																																																																		// String
-			{ 1, 1 } // Maximum keys of an algorithm , Integer
+					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications. For example it can be used to verify the integrity of the data.</html>",
+      "<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.\r\n" + //
+					"\n A key is required </html>",
+      }, // Algorithm brief																																																																																																															// ,																																																																																																																	// String
+			{ 1, 1 , 1} // Maximum keys of an algorithm , Integer
+
 	};
 
 	// Lunch the program
@@ -249,9 +253,9 @@ public class MainFrame extends JFrame {
 		EncBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				switch (ChooseAlgorithm.getSelectedItem().toString()) {
+            
 					case "SHA-1": // write here the same name that you wrote in line 74
 						String plain_text = SHA1_encryption(inputtext.getText());
-
 						results.setText(plain_text);
 						// Call here your algorithm function
 						break;
@@ -267,8 +271,27 @@ public class MainFrame extends JFrame {
 		HmacBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Here implement HMAC Algorithm
+				try {
+            String algorithmName = "HMAC";  // Replace with your algorithm name
+
+            // Check if the selected algorithm is HMAC
+            if (ChooseAlgorithm.getSelectedItem().toString().equals(algorithmName)) {
+               
+                String hmacResult = Hmac();
+                
+                // Display results
+                results.setText(hmacResult);
+            } else {
+                
+                Error("Please select the HMAC algorithm");
+            }
+        } catch (Exception ex) {
+            // Display an error for any unexpected exception
+            Error("An error occurred: " + ex.getMessage());
+        }
+    }
 			}
-		});
+		);
 		HmacBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		HmacBtn.setBounds(426, 680, 108, 40);
 		contentPane.add(HmacBtn);
@@ -363,4 +386,25 @@ public class MainFrame extends JFrame {
 		});
 
 	}
+	public String Hmac() throws NoSuchAlgorithmException, InvalidKeyException{
+    String key = getKeyValue()[0];  // Get the key value
+
+    Mac mac = Mac.getInstance("HmacSHA256");
+    SecretKeySpec secretKey = new SecretKeySpec(key.getBytes(), "HmacSHA256");
+    mac.init(secretKey);
+
+    String plainText = inputtext.getText();  // Get user input
+
+    // Calculate HMAC
+    byte[] hmacInBytes = mac.doFinal(plainText.getBytes());
+
+    // Convert bytes to string
+    StringBuilder stringBuilder = new StringBuilder();
+    for (byte b : hmacInBytes) {
+        stringBuilder.append(String.format("%02x", b));
+    }
+
+    // Return result and key
+    return stringBuilder.toString();
+}
 }
