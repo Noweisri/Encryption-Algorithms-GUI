@@ -13,12 +13,12 @@
   - [Link your algorithm to encrypt and decrypt buttons](#Link-your-algorithm-to-encrypt-and-decrypt-buttons)
   - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
 - [Upload Project Guide](#Upload-Project-Guide)
-- [Community support (algorithms uploaded)](#Community-support-(algorithms-uploaded))
+- [Community support (algorithms uploaded)](#Community-support)
 - [Group Members](#Group-Members)
   
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
-As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces a groundbreaking project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
+As the demand for secure information transfer grows, the need for a unified platform integrating various cryptographic algorithms becomes increasingly paramount. This Repository introduces an open-source project – a Graphic User Interface (GUI) platform built through a Java application using the WindowBuilder tool 
  that amalgamates diverse cryptographic algorithms such as RSA, AES, and other related operations, implemented by contributors, contributors can contribute by uploading their encryption algorithms through GitHub. 
 
 
@@ -101,7 +101,10 @@ Now you have your Version Of the Code in your account, below are the steps of ho
 
 ## Tips for editing code
 
-### How to add your algorithm to the drop-menu list 
+### How to add your algorithm to the drop-menu list
+> [!TIP]
+>Put your algorithm brief inside html brackets for a better user experience, as shown below.
+> <HTML> Example brief </HTML>
 ```Java
 Object[][] ArrayOfAlgorithms = {
 	{ "Example Algorithm", }, // Algorithm name, String
@@ -124,7 +127,7 @@ String plain_text = inputtext.getText() // now you stored user input into plain_
 >Try to show errors in all the scenarios, when the user types the Text/key in the wrong format, or when something unpredictable happened, and so on.
 
 ```java
-Error("Add here the text of your error") // Just call Error() function with message parameter and it will be displayed to the user
+Error("Add here the text of your error") // Just call the Error() function with your message as a parameter and it will be displayed to the user
 ```
 ### Display results
 ```Java
@@ -207,7 +210,8 @@ HashBtn.addActionListener(new ActionListener() {
 ![Screenshot 2023-11-13 231434](https://github.com/Noweisri/Encryption-Algorithms-GUI/assets/103143696/51021b4b-833a-4acf-8be3-46e560220f56)
 
 
-## Community support (algorithms uploaded)
+## Community support
+Thanks to all contributors who uploaded the algorithms.
 - SHA-1 Algorithm
   by [fahd192](https://github.com/fahd192)
 
