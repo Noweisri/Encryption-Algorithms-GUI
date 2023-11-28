@@ -103,7 +103,7 @@ Now you have your Version Of the Code in your account, below are the steps of ho
 
 ### How to add your algorithm to the drop-menu list
 > [!TIP]
->Put your algorithm brief inside html brackets for a better user experience, as shown below.
+>Put your algorithm brief inside HTML brackets for a better user experience, as shown following :point_right: ,
 > \<HTML> Example brief \</HTML>
 ```Java
 Object[][] ArrayOfAlgorithms = {
