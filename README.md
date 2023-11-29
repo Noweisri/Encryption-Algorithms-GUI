@@ -14,7 +14,7 @@
   - [HMAC - Digital Signature - Hash](#HMAC---Digital-Signature---Hash)
 - [Upload Project Guide](#Upload-Project-Guide)
 - [Community support (algorithms uploaded)](#Community-support)
-- [Group Members](#Group-Members)
+- [Team Members](#Team-Members)
   
 ## Introduction
 In an era dominated by digital communication and sensitive data exchange, the significance of robust cryptographic solutions cannot be overstated. 
@@ -211,13 +211,13 @@ HashBtn.addActionListener(new ActionListener() {
 
 
 ## Community support
-Thanks to all contributors who uploaded the algorithms.
+Thanks to all the contributors who uploaded the algorithms.
 - SHA-1 Algorithm
   by [fahd192](https://github.com/fahd192)
 
 - HMAC Algorithm
    by [AbdulrahmanAlwazzan](https://github.com/AbdulrahmanAlwazzan)
-## Group Members
+## Team Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 
 - [Abdullah Al-Fawaz](https://github.com/AboFawaz0)
