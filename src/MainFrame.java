@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -84,6 +85,7 @@ public class MainFrame extends JFrame {
 	private int keyFieldCount = 0;
 	public int columnIndex = 0;
 	private PlayfairCipher playfairCipher = new PlayfairCipher();
+
 	// Create GUI components panel_1
 	JPanel panel_1 = new JPanel();
 
@@ -144,11 +146,17 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(110, 110, 600, 960);
 		contentPane = new JPanel();
+		contentPane.setPreferredSize(new Dimension(555, 900));
 		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+
+		JScrollPane scrollPane = new JScrollPane(contentPane);
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		setContentPane(scrollPane);
 
 		JLabel lblkey = new JLabel("Key");
 		lblkey.setBounds(50, 325, 85, 22);
