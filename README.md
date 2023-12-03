@@ -217,6 +217,8 @@ Thanks to all the contributors who uploaded the algorithms.
 
 - HMAC Algorithm
    by [AbdulrahmanAlwazzan](https://github.com/AbdulrahmanAlwazzan)
+
+- PlayFair Algorithm
 ## Team Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 

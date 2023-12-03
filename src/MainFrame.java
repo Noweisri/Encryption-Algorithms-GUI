@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import java.awt.Font;
+import java.awt.Point;
+
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
@@ -81,7 +83,7 @@ public class MainFrame extends JFrame {
 	private int MAX_KEY = 0;
 	private int keyFieldCount = 0;
 	public int columnIndex = 0;
-
+	private PlayfairCipher playfairCipher = new PlayfairCipher();
 	// Create GUI components panel_1
 	JPanel panel_1 = new JPanel();
 
@@ -110,14 +112,15 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", "SHA-1", "HMAC", }, // Algorithm name , String
+			{ "Example Algorithm", "SHA-1", "HMAC", "Playfair Cipher", }, // Algorithm name , String
 			{ "Example Brief",
 					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications. For example it can be used to verify the integrity of the data.</html>",
-					"<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.\r\n"
+					"<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.</html> \r\n"
 							+ //
 							"\n A key is required </html>",
+					"<html>A symmetric encryption technique using a 5x5 matrix of letters to encrypt a pair of letters.</html>"
 			}, // Algorithm brief // , // String
-			{ 1, 1, 1 } // Maximum keys of an algorithm , Integer
+			{ 1, 1, 1, 1 } // Maximum keys of an algorithm , Integer
 
 	};
 
@@ -241,6 +244,16 @@ public class MainFrame extends JFrame {
 				switch (ChooseAlgorithm.getSelectedItem().toString()) {
 					case "SHA-1": // write here the same name that you wrote in line 74
 						Error("SHA-1 cannot be used to decrypt");
+					case "Playfair Cipher":
+
+						Component comp = keyspanel.getComponent(0);
+						if (comp instanceof JTextField) {
+							String key = ((JTextField) comp).getText();
+							playfairCipher.setKey(key);
+							String ciphertext = inputtext.getText();
+							String decryptedText = playfairCipher.decrypt(ciphertext);
+							results.setText(decryptedText);
+						}
 						// Call here you algorithm function
 						break;
 				}
@@ -259,6 +272,15 @@ public class MainFrame extends JFrame {
 					case "SHA-1": // write here the same name that you wrote in line 74
 						String plain_text = SHA1_encryption(inputtext.getText());
 						results.setText(plain_text);
+					case "Playfair Cipher":
+						Component comp = keyspanel.getComponent(0);
+						if (comp instanceof JTextField) {
+							String key = ((JTextField) comp).getText();
+							playfairCipher.setKey(key);
+							String plaintext = inputtext.getText();
+							String encryptedText = playfairCipher.encrypt(plaintext);
+							results.setText(encryptedText);
+						}
 						// Call here your algorithm function
 						break;
 				}
@@ -408,5 +430,140 @@ public class MainFrame extends JFrame {
 
 		// Return result and key
 		return stringBuilder.toString();
+	}
+
+	public class PlayfairCipher {
+		private String[][] table;
+
+		public PlayfairCipher() {
+
+		}
+
+		public void setKey(String key) {
+			key = parseString(key);
+			table = this.cipherTable(key);
+		}
+
+		private String parseString(String text) {
+			text = text.toUpperCase();
+			text = text.replaceAll("[^A-Z]", "");
+			text = text.replace("J", "I");
+			return text;
+		}
+
+		private String[][] cipherTable(String key) {
+			String[][] playfairTable = new String[5][5];
+			String keyString = key + "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+
+			for (int i = 0; i < 5; i++)
+				for (int j = 0; j < 5; j++)
+					playfairTable[i][j] = "";
+
+			for (int k = 0; k < keyString.length(); k++) {
+				boolean repeat = false;
+				boolean used = false;
+				for (int i = 0; i < 5; i++) {
+					for (int j = 0; j < 5; j++) {
+						if (playfairTable[i][j].equals("" + keyString.charAt(k))) {
+							repeat = true;
+						} else if (playfairTable[i][j].equals("") && !repeat && !used) {
+							playfairTable[i][j] = "" + keyString.charAt(k);
+							used = true;
+						}
+					}
+				}
+			}
+			return playfairTable;
+		}
+
+		public String encrypt(String text) {
+			text = parseString(text);
+			return cipher(text);
+		}
+
+		public String decrypt(String text) {
+			text = parseString(text);
+			return decode(text);
+		}
+
+		private String cipher(String in) {
+			String[] digraph = createDigraphs(in);
+			String out = "";
+			for (String d : digraph) {
+				char a = d.charAt(0);
+				char b = d.charAt(1);
+				int r1 = (int) getPoint(a).getX();
+				int r2 = (int) getPoint(b).getX();
+				int c1 = (int) getPoint(a).getY();
+				int c2 = (int) getPoint(b).getY();
+
+				if (r1 == r2) {
+					c1 = (c1 + 1) % 5;
+					c2 = (c2 + 1) % 5;
+				} else if (c1 == c2) {
+					r1 = (r1 + 1) % 5;
+					r2 = (r2 + 1) % 5;
+				} else {
+					int temp = c1;
+					c1 = c2;
+					c2 = temp;
+				}
+				out += table[r1][c1] + "" + table[r2][c2];
+			}
+			return out;
+		}
+
+		private String decode(String in) {
+			String[] digraph = createDigraphs(in);
+			String out = "";
+			for (String d : digraph) {
+				char a = d.charAt(0);
+				char b = d.charAt(1);
+				int r1 = (int) getPoint(a).getX();
+				int r2 = (int) getPoint(b).getX();
+				int c1 = (int) getPoint(a).getY();
+				int c2 = (int) getPoint(b).getY();
+
+				if (r1 == r2) {
+					c1 = (c1 - 1 + 5) % 5;
+					c2 = (c2 - 1 + 5) % 5;
+				} else if (c1 == c2) {
+					r1 = (r1 - 1 + 5) % 5;
+					r2 = (r2 - 1 + 5) % 5;
+				} else {
+					int temp = c1;
+					c1 = c2;
+					c2 = temp;
+				}
+				out += table[r1][c1] + "" + table[r2][c2];
+			}
+			return out;
+		}
+
+		private String[] createDigraphs(String in) {
+			int length = in.length() / 2 + in.length() % 2;
+			for (int i = 0; i < (length - 1); i++) {
+				if (in.charAt(2 * i) == in.charAt(2 * i + 1)) {
+					in = new StringBuffer(in).insert(2 * i + 1, 'X').toString();
+					length = in.length() / 2 + in.length() % 2;
+				}
+			}
+			if (in.length() / 2 == (length - 1))
+				in += "X";
+
+			String[] digraph = new String[length];
+			for (int j = 0; j < length; j++) {
+				digraph[j] = in.charAt(2 * j) + "" + in.charAt(2 * j + 1);
+			}
+			return digraph;
+		}
+
+		private Point getPoint(char c) {
+			for (int i = 0; i < 5; i++)
+				for (int j = 0; j < 5; j++)
+					if (c == table[i][j].charAt(0))
+						return new Point(i, j);
+			return null;
+		}
 	}
 }
