@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -60,6 +61,90 @@ public class MainFrame extends JFrame {
 			while (hashtext.length() < 32) {
 				hashtext = "0" + hashtext;
 			}
+			
+			
+
+			// return the HashText
+			return hashtext;
+		}
+
+		// For specifying wrong message digest algorithms
+		catch (NoSuchAlgorithmException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	public  String RSA_encryption(String input,int k) {
+		
+		
+		if(getKeyValue().length>k)
+		{
+		String key = getKeyValue()[k];
+		
+		String[] numbers = key.split(",");
+     
+		    
+		BigInteger e = new BigInteger(numbers[0].trim());
+		BigInteger n = new BigInteger(numbers[1].trim());
+		
+		String M = input;// one line for now 
+		    
+
+		    
+		//System.out.println("M   = " + M);
+
+		// First he turns M into a number m smaller than n
+		BigInteger m = new BigInteger(M.getBytes());// m in bytes
+		    
+		   
+		if (m.compareTo(n) == 1) {
+			Error("message too long for the given key ");
+			return "";
+		}
+		    
+		byte[] c = m.modPow(e, n).toByteArray(); //byte array
+		   
+		    
+		String cipher = new String(c); // this the cipher text not in bytes
+		
+		
+		return cipher;
+		
+}
+		else {
+			Error("please enter you key!");
+			return "";
+		}
+		
+		
+		
+	}
+	
+	
+	
+	public static String SHA512_encryption(String input) {
+		try {
+			// getInstance() method is called with algorithm SHA-1
+			MessageDigest md = MessageDigest.getInstance("SHA-512");
+
+			// digest() method is called
+			// to calculate message digest of the input string
+			// returned as array of byte
+			byte[] messageDigest = md.digest(input.getBytes());
+
+			// Convert byte array into signum representation
+			BigInteger no = new BigInteger(1, messageDigest);
+
+			// Convert message digest into hex value
+			String hashtext = no.toString(16);
+
+			// Add preceding 0s to make it 32 bit
+			while (hashtext.length() < 32) {
+				hashtext = "0" + hashtext;
+			}
+			
+			
 
 			// return the HashText
 			return hashtext;
@@ -91,7 +176,7 @@ public class MainFrame extends JFrame {
 	JLabel brief = new JLabel("Enter Here Brief about your algorithm");
 
 	// Get Keys values from user
-	public String[] getKeyValue() {
+	public  String[] getKeyValue() {
 		java.util.List<String> ListOfKeys = new java.util.ArrayList<>();
 		for (Component comp : keyspanel.getComponents()) {
 			if (comp instanceof JTextField) {
@@ -108,7 +193,7 @@ public class MainFrame extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", "SHA-1", "HMAC", "Playfair Cipher", "Homophone", }, // Algorithm name , String
+			{ "Example Algorithm", "SHA-1", "HMAC", "Playfair Cipher", "Homophone","RSA", }, // Algorithm name , String
 			{ "Example Brief",
 					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications. For example it can be used to verify the integrity of the data.</html>",
 					"<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.</html> \r\n"
@@ -116,9 +201,9 @@ public class MainFrame extends JFrame {
 							"\n A key is required </html>",
 					"<html>A symmetric encryption technique using a 5x5 matrix of letters to encrypt a pair of letters.</html>",
 					"<html>The Homophonic Substitution Cipher is a simple encryption algorithm where each plaintext English letter is converted into one of multiple possible cipher-letters specified to obscure the plaintext's frequency. (i.e. A frequent letter such as 'e' has four possible mappings: 'z', '7', '2' and '1', while the letter 'z' has only one mapping: 'n' due to its low occurrence in English text.",
-			}, // Algorithm brief // , // String
-			{ 1, 1, 1, 1, 1 } // Maximum keys of an algorithm , Integer
-
+			    "<html> RSA takes a key that consist of two part and apply the algorithm the same algorithm is applied on encrypt and decrypt. \n key format: 7,943 first key will be used for encryption and second key for decyption.<html>"
+      }, // Algorithm brief // , // String
+			{ 1, 1, 1, 1, 1, 2 } // Maximum keys of an algorithm , Integer
 	};
 
 	// Lunch the program
@@ -128,6 +213,7 @@ public class MainFrame extends JFrame {
 				try {
 					MainFrame frame = new MainFrame();
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -161,7 +247,7 @@ public class MainFrame extends JFrame {
 
 		// Fill the drop menu of algorithms && Each time the user clicks an algorithm
 		// the brief of it changes
-		JComboBox ChooseAlgorithm = new JComboBox();
+		 final JComboBox ChooseAlgorithm = new JComboBox();
 		ChooseAlgorithm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				for (int j = 0; j < ArrayOfAlgorithms[0].length; j++) {
@@ -265,6 +351,12 @@ public class MainFrame extends JFrame {
 
 						// Call here you algorithm function
 						break;
+						
+					case "RSA":
+						String plain_text2 = RSA_encryption(inputtext.getText(),1);
+						
+						results.setText(plain_text2);
+						break;	
 				}
 			}
 		});
@@ -296,7 +388,14 @@ public class MainFrame extends JFrame {
 						// Call here your algorithm function
 
 						break;
+						
+					case "RSA":
+						String plain_text2 = RSA_encryption(inputtext.getText(),0);
+						
+						results.setText(plain_text2);
+						break;
 				}
+					
 			}
 		});
 		EncBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -337,6 +436,11 @@ public class MainFrame extends JFrame {
 		HashBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Here Implement Hash algorithm
+				String hashed = SHA512_encryption(results.getText());
+				results.setText(hashed);
+				
+			
+				
 			}
 		});
 		HashBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
