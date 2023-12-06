@@ -224,7 +224,7 @@ Thanks to all the contributors who uploaded the algorithms.
   	bt [Fahad2001422](https://github.com/Fahad2001422)
   
 - RSA Algorithm
-  by [AbdulrahmanAlwazzan](https://github.com/AbdulrahmanAlwazzan)
+  by [AbdullahSZH](https://github.com/AbdullahSZH)
 ## Team Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 
