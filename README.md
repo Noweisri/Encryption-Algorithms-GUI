@@ -221,7 +221,7 @@ Thanks to all the contributors who uploaded the algorithms.
 - PlayFair Algorithm
 
 - Homophone Algorithm
-  	bt [Fahad2001422](https://github.com/Fahad2001422)
+  	by [Fahad2001422](https://github.com/Fahad2001422)
   
 - RSA Algorithm
   by [AbdullahSZH](https://github.com/AbdullahSZH)
