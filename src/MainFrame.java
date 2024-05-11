@@ -1,3 +1,4 @@
+package Project;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -39,7 +40,7 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import javax.swing.BoxLayout;
 
-public class MainFrame extends JFrame {
+public class MainFrame2 extends JFrame {
 
 	public static String SHA1_encryption(String input) {
 		try {
@@ -164,6 +165,7 @@ public class MainFrame extends JFrame {
 	private int keyFieldCount = 0;
 	public int columnIndex = 0;
 	private PlayfairCipher playfairCipher = new PlayfairCipher();
+	private Homophone homophoneCipher = new Homophone(false);
 
 	// Create GUI components panel_1
 	JPanel panel_1 = new JPanel();
@@ -200,10 +202,18 @@ public class MainFrame extends JFrame {
 							+ //
 							"\n A key is required </html>",
 					"<html>A symmetric encryption technique using a 5x5 matrix of letters to encrypt a pair of letters.</html>",
-					"<html>The Homophonic Substitution Cipher is a simple encryption algorithm where each plaintext English letter is converted into one of multiple possible cipher-letters specified to obscure the plaintext's frequency. (i.e. A frequent letter such as 'e' has four possible mappings: 'z', '7', '2' and '1', while the letter 'z' has only one mapping: 'n' due to its low occurrence in English text.",
-			    "<html> RSA takes a key that consist of two part and apply the algorithm the same algorithm is applied on encrypt and decrypt. \n key format: 7,943 first key will be used for encryption and second key for decyption.<html>"
-      }, // Algorithm brief // , // String
-			{ 1, 1, 1, 1, 1, 2 } // Maximum keys of an algorithm , Integer
+					"<html>" + "The Homophonic Substitution Cipher is a simple encryption algorithm where each plaintext English letter " + "is converted into one of multiple possible cipher-letters specified to obscure the plaintext's frequency." + " (i.e. A frequent letter such as 'e' has four possible mappings: 'z', '7', '2' and '1'," + " while the letter 'z' has only one mapping: 'n' due to its low occurrence in English text.\n\n", 
+			      "An acronym  of Data Encryption Standard, this algorithm creates a 56-bit key to encrypt a 64-bit data block by methods such as " +
+			      "bitwise XORing, permutation and substitution. This algorithm is implemented as a Feistel architecture so that encryption and " + 
+			      "decryption are very similar processes. This algorithm is not implemented in this simple GUI program.",
+			      
+			      "AES, also known as Advanced Encryption Standard, was published in 1998 following a selection process of alternative " + 
+			      "algorithms to replace DES. A key consists of either 128, 192 or 256 bits by which a 128-bit data block can be encrypted and decrypted." + 
+			      " In contrast with DES, AES uses a substitution and permutation network. " + 
+			      "This algorithm is not implemented in this simple GUI program."+ "</html>",
+        "<html> RSA takes a key that consist of two part and apply the algorithm the same algorithm is applied on encrypt and decrypt. \n key format: 7,943 first key will be used for encryption and second key for decyption.<html>"
+			}, // Algorithm brief // , // String
+			{ 1, 1, 1, 1, 1 , 2} // Maximum keys of an algorithm , Integer
 	};
 
 	// Lunch the program
@@ -211,7 +221,7 @@ public class MainFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainFrame frame = new MainFrame();
+					MainFrame2 frame = new MainFrame2();
 					frame.setVisible(true);
 					
 				} catch (Exception e) {
@@ -222,7 +232,7 @@ public class MainFrame extends JFrame {
 	}
 
 	// Initialize the MAin Frame
-	public MainFrame() {
+	public MainFrame2() {
 		setBackground(SystemColor.activeCaption);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(110, 110, 600, 960);
@@ -260,7 +270,6 @@ public class MainFrame extends JFrame {
 				brief.setText((String) valueUnderneath);
 				MAX_KEY = (int) ArrayOfAlgorithms[2][columnIndex];
 				System.out.print(MAX_KEY);
-
 			}
 		});
 		ChooseAlgorithm.setBounds(39, 103, 512, 48);
@@ -350,8 +359,6 @@ public class MainFrame extends JFrame {
 						results.setText(Homophone.getPlaintext());
 
 						// Call here you algorithm function
-						break;
-						
 					case "RSA":
 						String plain_text2 = RSA_encryption(inputtext.getText(),1);
 						
@@ -393,6 +400,10 @@ public class MainFrame extends JFrame {
 						String plain_text2 = RSA_encryption(inputtext.getText(),0);
 						
 						results.setText(plain_text2);
+						break;
+					case "Homophone":
+						Homophone.encrypt(inputtext.getText());
+						results.setText(Homophone.getCiphertext());
 						break;
 				}
 					
@@ -683,7 +694,6 @@ public class MainFrame extends JFrame {
 			return null;
 		}
 	}
-
 	public class Homophone {
 		private static StringBuilder plaintext;
 		private static StringBuilder ciphertext;
@@ -1134,7 +1144,6 @@ public class MainFrame extends JFrame {
 					letter = table.get(letter).get(0);
 				ciphertext.append(letter);
 			}
-
 			encrypted = true;
 		}
 
@@ -1169,7 +1178,6 @@ public class MainFrame extends JFrame {
 								}
 								break;
 							}
-
 							else if (wasCapitalized.contentEquals("false")) {
 								if (wasDigit) {
 									plaintext.append(cipherLetter);
@@ -1180,7 +1188,6 @@ public class MainFrame extends JFrame {
 								}
 								break;
 							}
-
 							else if (wasCapitalized.contentEquals("null")) {
 								if (wasDigit) {
 									plaintext.append(cipherLetter);
@@ -1192,7 +1199,6 @@ public class MainFrame extends JFrame {
 								break;
 							}
 						}
-
 					if (discoveredLetter != null)
 						break;
 				}
@@ -1201,7 +1207,6 @@ public class MainFrame extends JFrame {
 			isDigitBeforeEncryption.clear();
 			encrypted = false;
 		}
-
 		public static String getPlaintext() {
 			return plaintext.toString();
 		}
