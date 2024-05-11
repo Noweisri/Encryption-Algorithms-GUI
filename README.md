@@ -219,6 +219,12 @@ Thanks to all the contributors who uploaded the algorithms.
    by [AbdulrahmanAlwazzan](https://github.com/AbdulrahmanAlwazzan)
 
 - PlayFair Algorithm
+
+- Homophone Algorithm
+  	by [Fahad2001422](https://github.com/Fahad2001422)
+  
+- RSA Algorithm
+  by [AbdullahSZH](https://github.com/AbdullahSZH)
 ## Team Members
 - [Nawaf Al-Noweisri](https://github.com/Noweisri) 
 - [Abdullah Al-Saab](https://github.com/amalsaab) 
