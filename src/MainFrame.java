@@ -1,4 +1,3 @@
-package Project;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -40,7 +39,7 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import javax.swing.BoxLayout;
 
-public class MainFrame2 extends JFrame {
+public class MainFrame extends JFrame {
 
 	public static String SHA1_encryption(String input) {
 		try {
@@ -62,8 +61,6 @@ public class MainFrame2 extends JFrame {
 			while (hashtext.length() < 32) {
 				hashtext = "0" + hashtext;
 			}
-			
-			
 
 			// return the HashText
 			return hashtext;
@@ -74,56 +71,42 @@ public class MainFrame2 extends JFrame {
 			throw new RuntimeException(e);
 		}
 	}
-	
-	
-	public  String RSA_encryption(String input,int k) {
-		
-		
-		if(getKeyValue().length>k)
-		{
-		String key = getKeyValue()[k];
-		
-		String[] numbers = key.split(",");
-     
-		    
-		BigInteger e = new BigInteger(numbers[0].trim());
-		BigInteger n = new BigInteger(numbers[1].trim());
-		
-		String M = input;// one line for now 
-		    
 
-		    
-		//System.out.println("M   = " + M);
+	public String RSA_encryption(String input, int k) {
 
-		// First he turns M into a number m smaller than n
-		BigInteger m = new BigInteger(M.getBytes());// m in bytes
-		    
-		   
-		if (m.compareTo(n) == 1) {
-			Error("message too long for the given key ");
-			return "";
-		}
-		    
-		byte[] c = m.modPow(e, n).toByteArray(); //byte array
-		   
-		    
-		String cipher = new String(c); // this the cipher text not in bytes
-		
-		
-		return cipher;
-		
-}
-		else {
+		if (getKeyValue().length > k) {
+			String key = getKeyValue()[k];
+
+			String[] numbers = key.split(",");
+
+			BigInteger e = new BigInteger(numbers[0].trim());
+			BigInteger n = new BigInteger(numbers[1].trim());
+
+			String M = input;// one line for now
+
+			// System.out.println("M = " + M);
+
+			// First he turns M into a number m smaller than n
+			BigInteger m = new BigInteger(M.getBytes());// m in bytes
+
+			if (m.compareTo(n) == 1) {
+				Error("message too long for the given key ");
+				return "";
+			}
+
+			byte[] c = m.modPow(e, n).toByteArray(); // byte array
+
+			String cipher = new String(c); // this the cipher text not in bytes
+
+			return cipher;
+
+		} else {
 			Error("please enter you key!");
 			return "";
 		}
-		
-		
-		
+
 	}
-	
-	
-	
+
 	public static String SHA512_encryption(String input) {
 		try {
 			// getInstance() method is called with algorithm SHA-1
@@ -144,8 +127,6 @@ public class MainFrame2 extends JFrame {
 			while (hashtext.length() < 32) {
 				hashtext = "0" + hashtext;
 			}
-			
-			
 
 			// return the HashText
 			return hashtext;
@@ -178,7 +159,7 @@ public class MainFrame2 extends JFrame {
 	JLabel brief = new JLabel("Enter Here Brief about your algorithm");
 
 	// Get Keys values from user
-	public  String[] getKeyValue() {
+	public String[] getKeyValue() {
 		java.util.List<String> ListOfKeys = new java.util.ArrayList<>();
 		for (Component comp : keyspanel.getComponents()) {
 			if (comp instanceof JTextField) {
@@ -195,25 +176,15 @@ public class MainFrame2 extends JFrame {
 	}
 
 	Object[][] ArrayOfAlgorithms = {
-			{ "Example Algorithm", "SHA-1", "HMAC", "Playfair Cipher", "Homophone","RSA", }, // Algorithm name , String
+			{ "Example Algorithm", "SHA-1", "HMAC", "Playfair Cipher", "Homophone", "RSA", }, // Algorithm name , String
 			{ "Example Brief",
-					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications. For example it can be used to verify the integrity of the data.</html>",
-					"<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.</html> \r\n"
-							+ //
-							"\n A key is required </html>",
+					"<html>SHA-1 takes an input message of any length and produces a fixed-size output of 160-bit, known as hash value. The hash function is designed to be computationally infeasible to reverse, meaning that it is extremely difficult to find two different messages that produce the same hash value, This property makes SHA-1 useful for a variety of applications.</html>",
+					"<html> HMAC is a security technique that ensures the integrity and authenticity of a message. It uses a combination of a cryptographic hash function and a secret key to generate a hash value.\n-- A key is required ---</html>",
 					"<html>A symmetric encryption technique using a 5x5 matrix of letters to encrypt a pair of letters.</html>",
-					"<html>" + "The Homophonic Substitution Cipher is a simple encryption algorithm where each plaintext English letter " + "is converted into one of multiple possible cipher-letters specified to obscure the plaintext's frequency." + " (i.e. A frequent letter such as 'e' has four possible mappings: 'z', '7', '2' and '1'," + " while the letter 'z' has only one mapping: 'n' due to its low occurrence in English text.\n\n", 
-			      "An acronym  of Data Encryption Standard, this algorithm creates a 56-bit key to encrypt a 64-bit data block by methods such as " +
-			      "bitwise XORing, permutation and substitution. This algorithm is implemented as a Feistel architecture so that encryption and " + 
-			      "decryption are very similar processes. This algorithm is not implemented in this simple GUI program.",
-			      
-			      "AES, also known as Advanced Encryption Standard, was published in 1998 following a selection process of alternative " + 
-			      "algorithms to replace DES. A key consists of either 128, 192 or 256 bits by which a 128-bit data block can be encrypted and decrypted." + 
-			      " In contrast with DES, AES uses a substitution and permutation network. " + 
-			      "This algorithm is not implemented in this simple GUI program."+ "</html>",
-        "<html> RSA takes a key that consist of two part and apply the algorithm the same algorithm is applied on encrypt and decrypt. \n key format: 7,943 first key will be used for encryption and second key for decyption.<html>"
+					"<html>Homophonic Substitution Cipher takes each plaintext English letter and covert it into one of multiple possible cipher-letters specified to obscure the plaintext's frequency.(i.e. A frequent letter such as 'e' has four possible mappings: 'z', '7', '2' and '1', while the letter 'z' has only one mapping: 'n' due to its low occurrence in English text.</html>",
+					"<html> RSA takes a key that consist of two part and apply the algorithm the same algorithm is applied on encrypt and decrypt. \n key format: 7,943 first key will be used for encryption and second key for decyption.<html>"
 			}, // Algorithm brief // , // String
-			{ 1, 1, 1, 1, 1 , 2} // Maximum keys of an algorithm , Integer
+			{ 1, 1, 1, 1, 1, 2 } // Maximum keys of an algorithm , Integer
 	};
 
 	// Lunch the program
@@ -221,9 +192,9 @@ public class MainFrame2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainFrame2 frame = new MainFrame2();
+					MainFrame frame = new MainFrame();
 					frame.setVisible(true);
-					
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -232,7 +203,7 @@ public class MainFrame2 extends JFrame {
 	}
 
 	// Initialize the MAin Frame
-	public MainFrame2() {
+	public MainFrame() {
 		setBackground(SystemColor.activeCaption);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(110, 110, 600, 960);
@@ -257,7 +228,7 @@ public class MainFrame2 extends JFrame {
 
 		// Fill the drop menu of algorithms && Each time the user clicks an algorithm
 		// the brief of it changes
-		 final JComboBox ChooseAlgorithm = new JComboBox();
+		final JComboBox ChooseAlgorithm = new JComboBox();
 		ChooseAlgorithm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				for (int j = 0; j < ArrayOfAlgorithms[0].length; j++) {
@@ -360,10 +331,10 @@ public class MainFrame2 extends JFrame {
 
 						// Call here you algorithm function
 					case "RSA":
-						String plain_text2 = RSA_encryption(inputtext.getText(),1);
-						
+						String plain_text2 = RSA_encryption(inputtext.getText(), 1);
+
 						results.setText(plain_text2);
-						break;	
+						break;
 				}
 			}
 		});
@@ -389,16 +360,9 @@ public class MainFrame2 extends JFrame {
 							String encryptedText = playfairCipher.encrypt(plaintext);
 							results.setText(encryptedText);
 						}
-					case "Homophone":
-						Homophone.encrypt(inputtext.getText());
-						results.setText(Homophone.getCiphertext());
-						// Call here your algorithm function
-
-						break;
-						
 					case "RSA":
-						String plain_text2 = RSA_encryption(inputtext.getText(),0);
-						
+						String plain_text2 = RSA_encryption(inputtext.getText(), 0);
+
 						results.setText(plain_text2);
 						break;
 					case "Homophone":
@@ -406,7 +370,7 @@ public class MainFrame2 extends JFrame {
 						results.setText(Homophone.getCiphertext());
 						break;
 				}
-					
+
 			}
 		});
 		EncBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -449,9 +413,7 @@ public class MainFrame2 extends JFrame {
 				// Here Implement Hash algorithm
 				String hashed = SHA512_encryption(results.getText());
 				results.setText(hashed);
-				
-			
-				
+
 			}
 		});
 		HashBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -694,6 +656,7 @@ public class MainFrame2 extends JFrame {
 			return null;
 		}
 	}
+
 	public class Homophone {
 		private static StringBuilder plaintext;
 		private static StringBuilder ciphertext;
@@ -1177,8 +1140,7 @@ public class MainFrame2 extends JFrame {
 									discoveredLetter = plainLetter.toUpperCase();
 								}
 								break;
-							}
-							else if (wasCapitalized.contentEquals("false")) {
+							} else if (wasCapitalized.contentEquals("false")) {
 								if (wasDigit) {
 									plaintext.append(cipherLetter);
 									discoveredLetter = cipherLetter;
@@ -1187,8 +1149,7 @@ public class MainFrame2 extends JFrame {
 									discoveredLetter = plainLetter.toLowerCase();
 								}
 								break;
-							}
-							else if (wasCapitalized.contentEquals("null")) {
+							} else if (wasCapitalized.contentEquals("null")) {
 								if (wasDigit) {
 									plaintext.append(cipherLetter);
 									discoveredLetter = cipherLetter;
@@ -1207,6 +1168,7 @@ public class MainFrame2 extends JFrame {
 			isDigitBeforeEncryption.clear();
 			encrypted = false;
 		}
+
 		public static String getPlaintext() {
 			return plaintext.toString();
 		}
